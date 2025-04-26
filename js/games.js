@@ -184,16 +184,16 @@ const backImage = new Image();
 backImage.src = "images/hills.png";
 
 const platformImage = new Image();
-platformImage.src = "../images/platform.png";
+platformImage.src = "images/platform.png";
 
 const platformSmallImage = new Image();
-platformSmallImage.src = "../images/platformSmallTall.png";
+platformSmallImage.src = "images/platformSmallTall.png";
 
 const playerImage = new Image()
-playerImage.src = "../images/spriteStandRight.png";
+playerImage.src = "images/spriteStandRight.png";
 
 const playerRightImage = new Image()
-playerRightImage.src = "../images/spriteRunRight.png";
+playerRightImage.src = "images/spriteRunRight.png";
 
 
 const playerLeftImage = new Image()
