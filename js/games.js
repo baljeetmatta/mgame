@@ -179,29 +179,15 @@ function moveOffset(x) {
 //MAIN LOGIC
 
 //create Images
+let total=6;
 const backImage = new Image();
-backImage.src = "../images/hills.png";
+backImage.src = "images/hills.png";
 
 const platformImage = new Image();
 platformImage.src = "../images/platform.png";
 
 const platformSmallImage = new Image();
 platformSmallImage.src = "../images/platformSmallTall.png";
-
-//console.log(platformImage.width);
-
-const platforms = [];
-
-const platform = new Platform(0, canvas.height - platformImage.height, 100, 200);
-platform.draw();
-
-const platform1 = new Platform(platformImage.width - 2, canvas.height - platformImage.height, 100, 20);
-platform1.draw();
-
-
-platforms.push(platform);
-platforms.push(platform1);
-//platforms.push(platform2);
 
 const playerImage = new Image()
 playerImage.src = "../images/spriteStandRight.png";
@@ -212,6 +198,48 @@ playerRightImage.src = "../images/spriteRunRight.png";
 
 const playerLeftImage = new Image()
 playerLeftImage.src = "../images/spriteRunLeft.png";
+
+
+
+backImage.onload=loadingImages;
+platformImage.onload=loadingImages;
+platformSmallImage.onload=loadingImages;
+playerImage.onload=loadingImages;
+playerRightImage.onload=loadingImages;
+playerLeftImage.onload=loadingImages;
+
+
+function loadingImages()
+{
+    total--;
+    
+    if(total==0)
+    {
+        createPlatforms();
+    }
+
+}
+
+
+
+
+//console.log(platformImage.width);
+
+const platforms = [];
+function createPlatforms()
+{
+const platform = new Platform(0, canvas.height - platformImage.height, 100, 200);
+platform.draw();
+
+const platform1 = new Platform(platformImage.width - 2, canvas.height - platformImage.height, 100, 20);
+platform1.draw();
+
+
+platforms.push(platform);
+platforms.push(platform1);
+}
+//platforms.push(platform2);
+
 
 const player = new Player();
 player.draw();
