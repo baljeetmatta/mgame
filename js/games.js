@@ -197,7 +197,7 @@ playerRightImage.src = "images/spriteRunRight.png";
 
 
 const playerLeftImage = new Image()
-playerLeftImage.src = "../images/spriteRunLeft.png";
+playerLeftImage.src = "images/spriteRunLeft.png";
 
 
 
